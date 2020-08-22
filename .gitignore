@@ -2,10 +2,8 @@
 !.gitignore
 
 !blockchain
-blockchain/*
-!blockchain/contract.sol
-!blockchain/genesis.json
-!blockchain/deploy.js
+!blockchain/*
+blockchain/build
 
 !docs
 !docs/*

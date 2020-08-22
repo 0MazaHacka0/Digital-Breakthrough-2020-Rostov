@@ -8,22 +8,22 @@ edition = "2018"
 
 [dependencies]
 dotenv = "0.15.0"
-log = "0.4.8"
-log4rs = "0.12.0"
+log = "0.4.11"
+log4rs = "0.13.0"
 lazy_static = "1.4.0"
 config = "0.10.1"
-serde = { version = "1.0.114", features = ["derive"] }
-serde_derive = "1.0.114"
+serde = { version = "1.0.115", features = ["derive"] }
+serde_derive = "1.0.115"
 diesel = { version = "1.4.5", features = ["postgres", "r2d2"] }
 diesel_derives = "1.4.1"
-tera = "1.3.1"
+tera = "1.5.0"
 actix-web = "2.0.0"
 actix-rt = "1.1.1"
 actix-files = "0.2.2"
-actix-service = "1.0.5"
+actix-service = "1.0.6"
 actix-redis = "0.8.2"
 actix-session = "0.3.0"
 actix-http = "1.0.1"
 sha2 = "0.9.1"
 hex = "0.4.2"
-uuid = { version = "0.8.1", features = ["serde", "v4"] }
+run_script = "0.6.3"

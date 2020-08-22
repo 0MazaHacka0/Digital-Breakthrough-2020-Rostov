@@ -71,8 +71,6 @@ pub fn config_server(cfg: &mut web::ServiceConfig) {
     if let Some(api_route) = routes.clone().into_iter().find(|item| item.name == "api") {
         let route = api_route.route;
 
-        info!("{}", route.to_owned());
-
         cfg.service(web::scope(&route).configure(api::config_api));
     } else {
         warn!("Api routes not active...");

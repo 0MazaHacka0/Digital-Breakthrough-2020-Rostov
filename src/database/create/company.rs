@@ -24,5 +24,5 @@ pub fn save(new_company: NewAccount) {
     diesel::insert_into(companys)
         .values(&data)
         .execute(connection)
-        .unwrap();;
+        .unwrap();
 }
