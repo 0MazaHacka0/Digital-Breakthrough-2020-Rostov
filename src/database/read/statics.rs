@@ -4,7 +4,6 @@ use super::pages::get_page;
 
 use diesel::prelude::*;
 
-
 pub fn get_statics_for_page(route: &str, page: &str) -> Vec<Static> {
     use crate::schema::statics::dsl::*;
 

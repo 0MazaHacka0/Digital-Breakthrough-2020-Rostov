@@ -4,9 +4,8 @@ use crate::database::read::routes::get_all_routes;
 use crate::database::read::pages::get_page;
 use tera::Tera;
 
-mod admin;
 mod app;
-mod frame;
+mod api;
 pub mod error;
 
 lazy_static! {
@@ -54,12 +53,6 @@ pub fn get_page_path(route_name: &str, alias_page: &str) -> String {
 pub fn config_server(cfg: &mut web::ServiceConfig) {
     let routes = get_all_routes();
 
-    if let Some(admin_route) = routes.clone().into_iter().find(|item| item.name == "admin") {
-        cfg.service(web::scope(&admin_route.route).configure(admin::config_admin));
-    } else {
-        warn!("Admin routes not active...");
-    }
-
     if let Some(error_route) = routes.clone().into_iter().find(|item| item.name == "error") {
         cfg.service(web::scope(&error_route.route).configure(error::config_error));
     } else {
@@ -75,9 +68,13 @@ pub fn config_server(cfg: &mut web::ServiceConfig) {
         warn!("App routes not active...");
     }
 
-    if let Some(frame_route) = routes.clone().into_iter().find(|item| item.name == "frame") {
-        cfg.service(web::scope(&frame_route.route).configure(frame::config_frame));
+    if let Some(api_route) = routes.clone().into_iter().find(|item| item.name == "api") {
+        let route = api_route.route;
+
+        info!("{}", route.to_owned());
+
+        cfg.service(web::scope(&route).configure(api::config_api));
     } else {
-        warn!("Frame routes not active...");
+        warn!("Api routes not active...");
     }
 }
