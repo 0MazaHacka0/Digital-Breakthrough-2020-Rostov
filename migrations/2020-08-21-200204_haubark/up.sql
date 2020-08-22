@@ -15,7 +15,7 @@ COMMENT ON COLUMN routes.route IS 'global path for connect to item';
 COMMENT ON COLUMN routes.description IS 'description route';
 
 INSERT INTO routes(publication, name, route, description) VALUES
-    (1, 'admin', '/admin', 'active routes for admin page'),
+    (0, 'admin', '/admin', 'active routes for admin page'),
     (1, 'app', '/app', 'active routes for main application (recomended)'),
     (0, 'frame', '/frame', 'active routes for render frame'),
     (1, 'error', '/_error', 'active routes to error pages (recomended)');

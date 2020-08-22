@@ -35,7 +35,7 @@ const settingsContract = {
 	bytecode: '0x' + output.contracts[contractName].Storage.evm.bytecode.object,
 }
 
-fs.writeFileSync(configs.contract.save_to, JSON.stringify(settingsContract));
+fs.writeFileSync(fs.readFileSync(path.resolve(__dirname, configs.contract.save_to)), JSON.stringify(settingsContract));
 
 const contract = new web3.eth.Contract(output.contracts[contractName].Storage.abi)
 
