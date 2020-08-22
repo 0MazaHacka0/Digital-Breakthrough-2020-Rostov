@@ -1,0 +1,12 @@
+[server]
+host = "http://localhost"
+port = 8545
+
+[blockchain]
+account = "0x02d31960D48ef135328f85cE73e22e1e9537a20E"
+password = "password"
+
+[contract]
+save_to = "data.json"
+contract_name = "contract_name"
+version = "0.0.1"
