@@ -1,4 +1,4 @@
-package com.smarttech.haubark.ui.login;
+package com.smarttech.haubark.ui.flat_select;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,19 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.smarttech.haubark.R;
-import com.smarttech.haubark.ui.flat_select.FlatSelectActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class FlatSelectActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_flat_select);
 
-        findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getBaseContext(), FlatSelectActivity.class));
+                Intent intent = new Intent(getBaseContext(), FlatSelectListActivity.class);
+                startActivity(intent);
             }
         });
     }

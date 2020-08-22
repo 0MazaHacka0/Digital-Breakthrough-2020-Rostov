@@ -4,77 +4,86 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="24dp"
-    android:paddingTop="56dp"
-    android:theme="@android:style/Theme.Material.Light.NoActionBar"
-    android:paddingRight="24dp">
+    android:paddingRight="24dp"
+    android:theme="@android:style/Theme.Material.Light.NoActionBar">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:text="FUCK FUCK FUCK" />
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/logo" />
 
-    <!-- Email Label -->
+    <!-- Phone -->
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_phone_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/login_logo"
         android:layout_marginTop="8dp"
-        android:layout_above="@id/layout_center"
         android:layout_marginBottom="8dp">
 
         <EditText
             android:id="@+id/input_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone"
+            android:hint="@string/login_activity_phone_hint"
             android:inputType="phone" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Space
-        android:id="@+id/layout_center"
-        android:layout_width="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content" />
-
-    <!-- Password Label -->
+    <!-- Password -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/login_phone_layout"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/layout_center"
         android:layout_marginBottom="48dp">
 
         <EditText
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/login_activity_password_hint"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Login buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="24dp"
         android:orientation="vertical">
 
+        <!-- Get password -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_get_password"
+            style="@style/LoginActivity.GetPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginBottom="24dp"
-            android:text="Get password" />
+            android:layout_marginBottom="12dp"
+            android:text="@string/login_activity_send_password_button" />
 
+        <!-- Login -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login"
+            style="@style/LoginActivity.Login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:text="Login" />
+            android:layout_marginBottom="12dp"
+            android:text="@string/login_activity_login_button" />
+
+        <!-- Login with ESIA -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login_esia"
+            style="@style/LoginActivity.LoginEsia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_activity_login_esia" />
     </LinearLayout>
+
 </RelativeLayout>

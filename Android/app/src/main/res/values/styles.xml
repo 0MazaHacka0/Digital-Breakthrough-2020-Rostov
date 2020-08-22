@@ -7,4 +7,35 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <!-- Login activity -->
+    <style name="LoginActivity.GetPassword" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/loginActivityGetPasswordText</item>
+        <item name="backgroundTint">@color/loginActivityGetPasswordBackground</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+
+    <style name="LoginActivity.Login" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">@color/loginActivityLogin</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+
+    <style name="LoginActivity.LoginEsia" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">@color/loginActivityLoginEsia</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+
 </resources>

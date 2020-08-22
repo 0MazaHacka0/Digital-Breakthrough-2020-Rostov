@@ -3,4 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!-- Login Activity -->
+    <color name="loginActivityGetPasswordBackground">#EEF3F2</color>
+    <color name="loginActivityGetPasswordText">#52CFC4</color>
+
+    <color name="loginActivityLogin">#52CFC4</color>
+    <color name="loginActivityLoginEsia">#64BDFE</color>
 </resources>

@@ -1,3 +1,51 @@
 <resources>
-    <string name="app_name">HauBark</string>
+
+    <!-- Application -->
+    <string name="app_name">Голос</string>
+
+    <!-- Login Activity -->
+    <string name="login_activity_title">Вход</string>
+
+    <string name="login_activity_phone_hint">Телефон</string>
+    <string name="login_activity_password_hint">Пароль</string>
+
+    <string name="login_activity_send_password_button">Получить пароль</string>
+    <string name="login_activity_login_button">Войти</string>
+    <string name="login_activity_login_esia">Войти через госуслуги</string>
+
+    <!-- Flat Select Activity -->
+    
+
+
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
