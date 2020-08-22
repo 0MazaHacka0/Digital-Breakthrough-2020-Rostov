@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.smarttech.haubark.R;
+import com.smarttech.haubark.ui.main.MainActivity;
 
 public class FlatSelectActivity extends AppCompatActivity {
 
@@ -15,10 +16,10 @@ public class FlatSelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flat_select);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.flat_select_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), FlatSelectListActivity.class);
+                Intent intent = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

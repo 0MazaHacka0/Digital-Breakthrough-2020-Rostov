@@ -14,7 +14,12 @@
     <string name="login_activity_login_esia">Войти через госуслуги</string>
 
     <!-- Flat Select Activity -->
-    
+    <string name="flat_select_activity_title">Выберите квартиру</string>
+    <string name="flat_select_activity_text">
+        Это необходимо для получения информации о вашем доме, участию в голосовании для улучшения
+        жилищных условий и возможности подать обращение в ТСЖ или УК вашего дома
+    </string>
+    <string name="flat_select_activity_select_button">Выбрать</string>
 
 
 

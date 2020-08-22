@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -18,7 +18,7 @@
 
 
 
-    <!-- Login activity -->
+    <!-- Login Activity -->
     <style name="LoginActivity.GetPassword" parent="Widget.AppCompat.Button.Colored">
         <item name="android:textColor">@color/loginActivityGetPasswordText</item>
         <item name="backgroundTint">@color/loginActivityGetPasswordBackground</item>
@@ -34,6 +34,13 @@
 
     <style name="LoginActivity.LoginEsia" parent="Widget.AppCompat.Button.Colored">
         <item name="backgroundTint">@color/loginActivityLoginEsia</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+
+    <!-- Flat Select Activity -->
+    <style name="FlatSelectActivity.Select" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">@color/loginActivityLogin</item>
         <item name="android:layout_marginLeft">12dp</item>
         <item name="android:layout_marginRight">12dp</item>
     </style>
