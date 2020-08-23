@@ -18,3 +18,19 @@ pub struct Loggin {
     pub phone: String,
     pub password: String
 }
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct Vote {
+    pub home_id: i32,
+    pub description: Option<String>
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct VoteIds {
+    pub home_id: i32,
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct Votes {
+    pub vote_id: i32,
+}

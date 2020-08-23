@@ -33,8 +33,7 @@ contract System_Votes {
 
     function createVote(uint _home_id, string memory _description) public returns (uint voteID) {
         require(msg.sender == owner);
-        countVotes = countVotes++;
-        voteID = countVotes;
+        voteID = countVotes++;
         votes[voteID] = Vote(_home_id, _description, 0);
 
         return voteID;
@@ -53,6 +52,8 @@ contract System_Votes {
         voiceID = votes[_vote_id].count_voices + 1;
         votes[_vote_id].count_voices++;
         votes[_vote_id].voices[voiceID] = Voice(_user_id, state);
+
+        return voiceID;
     }
 
     function getVotesIds(uint _home_id) public view returns (uint[] memory) {
@@ -64,7 +65,7 @@ contract System_Votes {
         for (uint i = 0; i < countVotes; i++) {
             if(votes[i].home_id == _home_id) {
                 votesIds[count] = i;
-                count = count++;
+                count++;
             }
         }
 

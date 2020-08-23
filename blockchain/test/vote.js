@@ -1,9 +1,9 @@
 const { iteratee } = require("lodash");
 
-const Vote = artifacts.require("Vote");
+const Vote = artifacts.require("System_Votes");
 
 contract('Vote', accounts => {
     it('deploy', async () => {
-        await MetaCoin.deployed();
+        await Vote.deployed();
     })
 })
