@@ -40,7 +40,7 @@ pub struct Region {
 pub struct Company {
     pub id: i32,
     pub password_hash: String,
-    pub email: String,
+    pub phone: String,
     pub region_id: i32
 }
 
@@ -48,7 +48,7 @@ pub struct Company {
 #[table_name = "companys"]
 pub struct CompanyOmitId {
     pub password_hash: String,
-    pub email: String,
+    pub phone: String,
     pub region_id: i32
 }
 
@@ -64,7 +64,7 @@ pub struct Houms {
 pub struct User {
     pub id: i32,
     pub password_hash: String,
-    pub email: String,
+    pub phone: String,
     pub region_id: i32,
     pub home_id: i32,
 }
@@ -73,7 +73,7 @@ pub struct User {
 #[table_name = "users"]
 pub struct UserOmitId {
     pub password_hash: String,
-    pub email: String,
+    pub phone: String,
     pub region_id: i32,
     pub home_id: i32,
 }
