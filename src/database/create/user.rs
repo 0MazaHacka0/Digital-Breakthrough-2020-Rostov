@@ -7,7 +7,7 @@ use hex;
 
 use diesel::prelude::*;
 
-pub fn save(new_user: NewAccount) {
+pub fn save(new_user: NewAccount) -> (i32, i32) {
     use crate::schema::users::dsl::*;
 
     let connection = &*DB_POOL.get().unwrap();
@@ -22,8 +22,19 @@ pub fn save(new_user: NewAccount) {
         home_id: new_user.home_id.unwrap_or(1)
     };
 
-    diesel::insert_into(users)
+    let result = diesel::insert_into(users)
         .values(&data)
         .execute(connection)
         .unwrap();
+    
+    if result == 0 {
+        return (-1, -1)
+    }
+
+    let inserted_user = users
+        .select((id, home_id))
+        .load::<(i32, i32)>(connection)
+        .unwrap();
+
+    *inserted_user.last().unwrap_or(&(1, 1))
 }

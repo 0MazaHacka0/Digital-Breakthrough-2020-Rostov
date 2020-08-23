@@ -1,14 +1,11 @@
 use actix_web::{
     web,
-    HttpResponse,
     Result,
-    Error,
-    http
+    Error
 };
-
 use serde::{Deserialize, Serialize};
+use run_script::ScriptOptions;
 
-use crate::models::database::{Company, User};
 use crate::models::api::NewAccount;
 
 use crate::database::read::companys;
@@ -17,10 +14,21 @@ use crate::database::read::users;
 use crate::database::create::company as create_company;
 use crate::database::create::user as create_user;
 
-fn redirect_to(location: &str) -> HttpResponse {
-    HttpResponse::Found()
-        .header(http::header::LOCATION, location)
-        .finish()
+fn save_user_in_bch(user_id: i32, home_id: i32) {
+    let options = ScriptOptions::new();
+    let args = vec![];
+
+    let (code, output, error) = run_script::run(
+        &format!(r#"
+        npm run blockchain:add_user -- --user_id={user_id} --home_id={home_id}
+        "#, user_id=user_id, home_id=home_id),
+        &args,
+        &options
+    ).unwrap();
+
+    info!("code: {}", code);
+    info!("output: {}", output);
+    error!("error: {}", error);
 }
 
 #[derive(Deserialize, Serialize, Debug)]
@@ -33,7 +41,15 @@ async fn register_user(
     params: web::Json<NewAccount>
 ) -> Result<web::Json<Answer>, Error> {
     if users::check_account(params.email.to_owned()) {
-        create_user::save(params.into_inner());
+        let id = create_user::save(params.into_inner());
+
+        if id.0 == -1 {
+            let answer = Answer { code: 500, message: "Error saving user".to_owned() };
+
+            return Ok(web::Json(answer))
+        }
+
+        save_user_in_bch(id.0, id.1);
 
         let answer = Answer { code: 200, message: "ok".to_owned() };
 

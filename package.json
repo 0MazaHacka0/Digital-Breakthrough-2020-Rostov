@@ -9,7 +9,8 @@
     "front:dev-styles": "gulp",
     "front:dev-server": "gulp && webpack-dev-server",
     "front:prod": "node -v && npm -v && gulp && webpack --mode=production --apps=all",
-    "blockchain:deploy": "node ./blockchain/deploy.js"
+    "blockchain:deploy": "node ./blockchain/deploy.js",
+    "blockchain:add_user": "node ./blockchain/api/add_user.js"
   },
   "author": "",
   "license": "ISC",
