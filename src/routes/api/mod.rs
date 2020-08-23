@@ -4,10 +4,12 @@ use actix_web::{
 
 mod register;
 mod authorization;
+mod voice;
 
 pub fn config_api(cfg: &mut web::ServiceConfig) {
     cfg
         .service(web::scope("/registration").configure(register::config))
+        .service(web::scope("/voice").configure(voice::config))
         .service(web::resource("/login").route(web::post().to(authorization::login)))
         .service(web::resource("/logout").route(web::post().to(authorization::logout)));
 }

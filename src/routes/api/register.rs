@@ -31,10 +31,26 @@ fn save_user_in_bch(user_id: i32, home_id: i32) {
     error!("error: {}", error);
 }
 
+fn verify_new_user(account: NewAccount) -> bool {
+    let check_account = users::check_account(account.phone.to_owned());
+    
+    if !check_account {
+        return false;
+    }
+
+    return account.phone.len() == 11 && account.password.len() > 0
+}
+
 async fn register_user(
     params: web::Json<NewAccount>
 ) -> Result<web::Json<Answer>, Error> {
-    if users::check_account(params.phone.to_owned()) {
+    let data = NewAccount {
+        home_id: params.home_id,
+        phone: params.phone.clone(),
+        password: params.password.clone()
+    };
+
+    if verify_new_user(data) {   
         let id = create_user::save(params.into_inner());
 
         if id.0 == -1 {
