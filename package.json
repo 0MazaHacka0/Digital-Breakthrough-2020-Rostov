@@ -9,8 +9,11 @@
     "front:dev-styles": "gulp",
     "front:dev-server": "gulp && webpack-dev-server",
     "front:prod": "node -v && npm -v && gulp && webpack --mode=production --apps=all",
-    "blockchain:deploy": "node ./blockchain/deploy.js",
-    "blockchain:add_user": "node ./blockchain/api/add_user.js"
+    "blockchain:add_user": "node ./blockchain/api/add_user.js",
+    "blockchain:add_voice": "node ./blockchain/api/add_voice.js",
+    "blockchain:create_vote": "node ./blockchain/api/create_vote.js",
+    "blockchain:get_vote_ids": "node ./blockchain/api/get_vote_ids.js",
+    "blockchain:get_vote": "node ./blockchain/api/get_vote.js"
   },
   "author": "",
   "license": "ISC",
