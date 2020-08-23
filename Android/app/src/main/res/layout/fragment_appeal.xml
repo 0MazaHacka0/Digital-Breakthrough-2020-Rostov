@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.main.tabs.AppealFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Buttons -->
+    <Button
+        style="@style/MainActivity.Item"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_appeal_appeal" />
 
-</FrameLayout>
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_appeal_complain" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_appeal_voting_protocols" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_appeal_voting_results" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_appeal_claims" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_appeal_docs" />
+
+</LinearLayout>

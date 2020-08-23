@@ -26,7 +26,8 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login();
+//                login();
+                startActivity(new Intent(getBaseContext(), FlatSelectActivity.class));
             }
         });
     }
