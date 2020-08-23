@@ -1,6 +1,7 @@
 package com.smarttech.haubark.ui.main.tabs.vote_list;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.smarttech.haubark.R;
 import com.smarttech.haubark.data.Voting;
+import com.smarttech.haubark.ui.main.VoteActivity;
 
 import java.util.List;
 
@@ -49,7 +51,7 @@ public class VoteAdapter extends ArrayAdapter<Voting> {
             view.findViewById(R.id.voting_container).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    context.startActivity(new Intent(context, VoteActivity.class));
                 }
             });
 
