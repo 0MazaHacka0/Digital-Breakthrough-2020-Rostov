@@ -8,11 +8,11 @@ const voteId = yargs.vote_id
 const userId = yargs.user_id
 const state = yargs.state
 
-if ([userId, voteId, state].includes(undefuned)) {
+if ([userId, voteId, state].includes(undefined)) {
     throw new Error('saving id is undefined!')
 }
 
-if (![0, 1, 2].includes(!state)) {
+if (![0, 1, 2].includes(state)) {
     throw new Error('state is not valid!')
 }
 

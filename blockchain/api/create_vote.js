@@ -4,10 +4,10 @@ const fs = require('fs')
 const path = require('path')
 const toml = require('toml')
 
-const userId = yargs.home_id
+const homeId = yargs.home_id
 let description = yargs.description
 
-if (userId == undefined) {
+if (homeId == undefined) {
     throw new Error('saving id is undefined!')
 }
 
@@ -30,6 +30,6 @@ var contract = new web3.eth.Contract(contractInfo.abi, {
 
 contract.options.address = settings.votes.address
 
-contract.methods.createVote(+userId, description).send()
+contract.methods.createVote(+homeId, description).send()
     .then(console.log)
     .catch(console.error)

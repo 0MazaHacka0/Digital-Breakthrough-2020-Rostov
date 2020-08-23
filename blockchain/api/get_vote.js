@@ -25,6 +25,8 @@ var contract = new web3.eth.Contract(contractInfo.abi, {
 
 contract.options.address = settings.votes.address
 
+const saveResult = data => console.log('aaaaaaaa', data)
+
 contract.methods.getVote(+voteId).call()
-    .then(console.log)
+    .then(saveResult)
     .catch(console.error)
