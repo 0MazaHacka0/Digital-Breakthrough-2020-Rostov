@@ -36,6 +36,8 @@
     <string name="main_activity_appeal_voting_results">Результаты голосований</string>
     <string name="main_activity_appeal_claims">Претензии</string>
     <string name="main_activity_appeal_docs">Справка (статьи и законы)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

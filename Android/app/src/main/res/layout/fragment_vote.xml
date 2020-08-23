@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.tabs.VoteFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Голосование по вопросу:" />
+
+    <TextView
+        android:id="@+id/vote_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Решение принимается при 50% голосов от числа принявших участие (!) в собрании собственников" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Оставьте свой голос:" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/vote_yes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="За" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/vote_no"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Против" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/vote_abstained"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Воздержусь" />
+
+</LinearLayout>
