@@ -23,6 +23,15 @@
 
     <!-- Main Activity -->
     <string name="main_activity_house_information">Информация о доме</string>
+    <string name="main_activity_meeting">Собрание</string>
+    <string name="main_activity_flats">Квартиры</string>
+    <string name="main_activity_questions">Вопросы</string>
+    <string name="main_activity_chat">Чат жильцов дома</string>
+    <string name="main_activity_news">Новости</string>
+    <string name="main_activity_actions">Мероприятия</string>
+
+
+
 
     <string name="title_activity_main">MainActivity</string>
     <string name="tab_text_1">Tab 1</string>

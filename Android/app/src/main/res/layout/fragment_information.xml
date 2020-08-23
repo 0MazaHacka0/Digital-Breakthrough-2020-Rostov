@@ -11,17 +11,43 @@
     <Button
         style="@style/MainActivity.Item"
         android:layout_width="match_parent"
-        android:gravity="left|center"
-        android:drawablePadding="10dp"
         android:drawableLeft="@drawable/ic_building"
         android:text="@string/main_activity_house_information" />
 
     <Button
         style="@style/MainActivity.Item"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#FFFFFF"
         android:drawableLeft="@drawable/ic_building"
-        android:text="SOMETHING FUCKED UP" />
+        android:text="@string/main_activity_meeting" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_flats" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_questions" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_chat" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_news" />
+
+    <Button
+        style="@style/MainActivity.Item"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_building"
+        android:text="@string/main_activity_actions" />
 
 </LinearLayout>
