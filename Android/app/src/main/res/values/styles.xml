@@ -45,4 +45,17 @@
         <item name="android:layout_marginRight">12dp</item>
     </style>
 
+    <!-- Main Activity -->
+    <style name="MainActivity.Item" parent="Widget.AppCompat.Button.Borderless">
+        <item name="backgroundTint">#FFF</item>
+
+        <item name="android:layout_height">50dp</item>
+<!--        <item name="android:textAlignment">left</item>-->
+        <item name="android:padding">5dp</item>
+
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginLeft">7dp</item>
+        <item name="android:layout_marginRight">7dp</item>
+    </style>
+
 </resources>

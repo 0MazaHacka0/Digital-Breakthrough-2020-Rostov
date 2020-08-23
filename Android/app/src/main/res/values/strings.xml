@@ -21,7 +21,8 @@
     </string>
     <string name="flat_select_activity_select_button">Выбрать</string>
 
-
+    <!-- Main Activity -->
+    <string name="main_activity_house_information">Информация о доме</string>
 
     <string name="title_activity_main">MainActivity</string>
     <string name="tab_text_1">Tab 1</string>
