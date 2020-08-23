@@ -23,6 +23,9 @@ use actix_redis::RedisSession;
 use actix_service::Service;
 use actix_web::{App, HttpServer};
 
+use actix_identity::{CookieIdentityPolicy, IdentityService};
+use rand::Rng;
+
 lazy_static! {
     static ref SETTINGS: models::configuration::AppSettings = {
         use config::{Config, File as ConfigFile};
@@ -45,7 +48,14 @@ async fn main() -> std::io::Result<()> {
     warn!("Run main server...");
 
     let app_server = move || {
+        let private_key = rand::thread_rng().gen::<[u8; 32]>();
+
         App::new()
+            .wrap(IdentityService::new(
+                CookieIdentityPolicy::new(&private_key)
+                    .name("auth-cookie")
+                    .secure(false),
+            ))
             .wrap_fn(|req, srv| {
                 info!("REQUEST: {:?}", req.head());
                 srv.call(req)

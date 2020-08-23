@@ -3,10 +3,10 @@ use actix_web::{
     Result,
     Error
 };
-use serde::{Deserialize, Serialize};
+
 use run_script::ScriptOptions;
 
-use crate::models::api::NewAccount;
+use crate::models::api::{NewAccount, Answer};
 
 use crate::database::read::companys;
 use crate::database::read::users;
@@ -29,12 +29,6 @@ fn save_user_in_bch(user_id: i32, home_id: i32) {
     info!("code: {}", code);
     info!("output: {}", output);
     error!("error: {}", error);
-}
-
-#[derive(Deserialize, Serialize, Debug)]
-struct Answer {
-    code: i32,
-    message: String
 }
 
 async fn register_user(
