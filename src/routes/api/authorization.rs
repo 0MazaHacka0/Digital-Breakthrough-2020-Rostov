@@ -14,8 +14,7 @@ pub async fn login(
     params: web::Json<Loggin>,
     id: Identity
 ) -> Result<web::Json<Answer>, Error> {
-    let user_id = get_user_id(params.email.clone());
-
+    let user_id = get_user_id(params.phone.clone());
 
     if let Some(_identifier) = id.identity() {
         return Ok(web::Json(Answer { code: 400, message: "User is logging".to_owned() }))

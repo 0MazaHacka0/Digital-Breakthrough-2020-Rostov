@@ -16,7 +16,7 @@ pub fn save(new_company: NewAccount) {
     let connection = &*DB_POOL.get().unwrap();
 
     let data = CompanyOmitId {
-        email: new_company.email,
+        email: new_company.phone,
         password_hash: hex::encode(hasher.finalize()),
         region_id: 1
     };

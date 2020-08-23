@@ -2,7 +2,7 @@ table! {
     companys (id) {
         id -> Int4,
         password_hash -> Text,
-        email -> Text,
+        phone -> Text,
         region_id -> Int4,
     }
 }
@@ -57,7 +57,7 @@ table! {
     users (id) {
         id -> Int4,
         password_hash -> Text,
-        email -> Text,
+        phone -> Text,
         region_id -> Int4,
         home_id -> Int4,
     }

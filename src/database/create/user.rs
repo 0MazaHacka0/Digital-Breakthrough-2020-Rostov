@@ -16,7 +16,7 @@ pub fn save(new_user: NewAccount) -> (i32, i32) {
     hasher.update(new_user.password);
 
     let data = UserOmitId {
-        email: new_user.email,
+        email: new_user.phone,
         password_hash: hex::encode(hasher.finalize()),
         region_id: 1,
         home_id: new_user.home_id.unwrap_or(1)

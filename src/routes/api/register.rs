@@ -34,7 +34,7 @@ fn save_user_in_bch(user_id: i32, home_id: i32) {
 async fn register_user(
     params: web::Json<NewAccount>
 ) -> Result<web::Json<Answer>, Error> {
-    if users::check_account(params.email.to_owned()) {
+    if users::check_account(params.phone.to_owned()) {
         let id = create_user::save(params.into_inner());
 
         if id.0 == -1 {
@@ -58,7 +58,7 @@ async fn register_user(
 async fn register_company(
     params: web::Json<NewAccount>
 ) -> Result<web::Json<Answer>, Error> {
-    if companys::check_account(params.email.to_owned()) {
+    if companys::check_account(params.phone.to_owned()) {
         create_company::save(params.into_inner());
 
         let answer = Answer { code: 200, message: "ok".to_owned() };
